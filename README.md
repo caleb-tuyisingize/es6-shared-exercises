@@ -155,7 +155,9 @@ oddSquares([1, 2, 3, 4, 5, 6]); // should return [1, 9, 25]
 oddSquares([10, 15, 20, 25, 30]); // should return [225, 625]
 
 const oddSquares = (arr)=>{
-    return arr.map((a)=>a % 2 !==0 ? a: "").join("").toString().split("").map(a=> Number(a));
+    const arr2 = [];
+    arr.map((a)=>a % 2 !==0 ? arr2.push(a*a): "");
+    return arr2;
 }
 console.log(oddSquares([1, 2, 3, 4, 5, 6]));
 
