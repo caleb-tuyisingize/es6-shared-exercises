@@ -36,5 +36,77 @@ assert.strictEqual(variable, undefined);
 # EXERCISES 5
 
 ```bash
+const is like let plus read-only
+scalar values are read-only
+e.g. a number
+const constNum = 0;
+
+
+🍀 A new find or treasured gem, cherish it!
+
+or a string
+const constString = 'I am a const';
+
+
+🍀 A new find or treasured gem, cherish it!
+
+complex types are NOT fully read-only
+array`s items can be changed
+arr[0] = 42;
+
+
+🎈 Mastery in every glimpse.
+
+object`s can be modified
 ``` 
+
+# EXERCISES ON JSHERO
+
+```bash 
+Several variables
+Several variables are declared and initialized in 2 program lines:
+let city = 'Lubumbashi';
+let country = 'Congo';
+Exercise
+Declare a variable flower and assign it the value 'rose'. Declare a second variable tree and assign it the value 'maple'.
++ Solution
+let flower = 'rose';
+let tree = 'maple';
+Tests
+
+Reading your code successfully.
+
+flower has a value.
+
+flower has value of 'rose'.
+
+tree has a value.
+
+tree has value of 'maple'.
+
+All tests passed!
+
+Continue
+What is x?
+Let's practice what we've just learned. Here you have to read code.
+Exercise
+Which value does x have after execution of the following code?
+let x = 'Geeta';
++ Solution
+'Geeta'
+Tests
+
+Variables
+JavaScript programs consist of a series of statements. Each statement performs an elementary operation. By executing many instructions you can finally solve complex tasks. Each statement is written in a line and closed with a semicolon.
+
+An elementary statement is the declaration and initialization of a variable. A variable is a container for a value. The statement
+let city = 'Porbandar';
+declares a variable with the name city and initializes it with the value 'Porbandar'. The variable is declared with the keyword let. Use the equals sign, the assignment operator, to assign a value to the variable. Note: JavaScript is case-sensitive. city and City are two different variables.
+Exercise
+Declare a variable firstname and initialize it with the value 'Lata'.
++ Hint
++ Solution
+let firstname  = 'Lata'
+Tests
+```
 
