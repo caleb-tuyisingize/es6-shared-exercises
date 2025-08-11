@@ -11,3 +11,13 @@ assert.throws(() => letX, ReferenceError);
 let obj = {x: 1};
 for (let key in obj) {}
 assert.throws(() => key, ReferenceError);
+
+// FUNCTIONS
+
+const a = ()=>{
+return `Hello a!`;
+}
+
+const b = ()=>{
+return `Hello b!`;
+}
