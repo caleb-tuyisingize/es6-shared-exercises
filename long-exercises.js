@@ -97,3 +97,28 @@ Array.prototype.myFilter = function(callback){
 }
 
 console.log("myFilter:", arrMethods.myFilter(x => x % 2 === 0));
+
+const transformKeys = (obj, transformFn)=>{
+  const result = {};
+
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      const newKey = transformFn(key);
+      result[newKey] = obj[key];
+    }
+  }
+ 
+  return result;
+
+}
+
+const inputObject = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+};
+ const transformKey = (key) => key.toUpperCase();
+ const transformObject = transformKeys(inputObject, transformKey);
+console.log(transformObject);
+
+
