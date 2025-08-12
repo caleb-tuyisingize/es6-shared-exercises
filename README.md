@@ -231,6 +231,32 @@ console.log("My map:", arrMethods.myMap(x => x*2));
 ## FOREACH = myForEach
 
 ```bash
+Array.prototype.myForEach = function(callback){
+        const result = [];
+    for(let i = 0; i < this.length; i++){
+        if(i in this){
+           callback(this[i],i,this);
+        }
+    }
+}
+
+arrMethods.myForEach((val, i) => console.log(`Index: ${i}: ${val}`));
+```
+
+## FILTER = myFilter
+
+```bash
+Array.prototype.myFilter = function(callback){
+        const result = [];
+    for(let i = 0; i < this.length; i++){
+        if(i in this && callback(this[i],i,this)){
+           result.push(this[i]);
+        }
+    }
+    return result;
+}
+
+console.log("myFilter:", arrMethods.myFilter(x => x % 2 === 0));
 ```
 
 

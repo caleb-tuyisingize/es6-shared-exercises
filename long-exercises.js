@@ -74,7 +74,7 @@ Array.prototype.myMap= function(callback){
     }
 return result;
 };
-
+console.log("My map:", arrMethods.myMap(x => x*2));
 Array.prototype.myForEach = function(callback){
         const result = [];
     for(let i = 0; i < this.length; i++){
@@ -85,3 +85,15 @@ Array.prototype.myForEach = function(callback){
 }
 
 arrMethods.myForEach((val, i) => console.log(`Index: ${i}: ${val}`));
+
+Array.prototype.myFilter = function(callback){
+        const result = [];
+    for(let i = 0; i < this.length; i++){
+        if(i in this && callback(this[i],i,this)){
+           result.push(this[i]);
+        }
+    }
+    return result;
+}
+
+console.log("myFilter:", arrMethods.myFilter(x => x % 2 === 0));
