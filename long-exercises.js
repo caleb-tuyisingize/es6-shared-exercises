@@ -59,3 +59,41 @@ let nullableData = {
 };
 
 console.log(nullables(nullableData));
+
+
+// EXERCISES 5
+
+const arrMethods = [0,1,2,3,4]
+
+Array.prototype.myMap= function(callback){
+    const result = [];
+    for(let i = 0; i < this.length; i++){
+        if(i in this){
+           result.push(callback(this[i],i,this));
+        }
+    }
+return result;
+};
+console.log("My map:", arrMethods.myMap(x => x*2));
+Array.prototype.myForEach = function(callback){
+        const result = [];
+    for(let i = 0; i < this.length; i++){
+        if(i in this){
+           callback(this[i],i,this);
+        }
+    }
+}
+
+arrMethods.myForEach((val, i) => console.log(`Index: ${i}: ${val}`));
+
+Array.prototype.myFilter = function(callback){
+        const result = [];
+    for(let i = 0; i < this.length; i++){
+        if(i in this && callback(this[i],i,this)){
+           result.push(this[i]);
+        }
+    }
+    return result;
+}
+
+console.log("myFilter:", arrMethods.myFilter(x => x % 2 === 0));
