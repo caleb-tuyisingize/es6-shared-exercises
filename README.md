@@ -183,7 +183,55 @@ console.log(sortProducts(items));
 #  EXERCISES 4
 
 ```bash
-   
+   Nullable conversion
+you are given an object with properties that may contain null or undefined values. Your task is to implement a function called convertNullableValues that checks if any of the properties in the object contains null or undefined. If a property is null convert it to zero and if a property is undefined convert it to an empty string. Return the modified object.
+
+ 
+const nullables = (data)=>{
+    for(let item in data){
+        if(data[item] === null){
+            data[item] = 0;
+    }else if(data[item] === undefined){
+      data[item] = "";
+    }
+}
+  return data;
+}
+
+let nullableData = {
+  name: undefined,
+  age: null,
+  city: "Kigali",
+  score: null,
+  status: undefined
+};
+
+console.log(nullables(nullableData));
 ```
+# EXERCISES 5
+```bash
+JavaScript Array Methods Implementation
+In this question, we would like you to demonstrate your understanding of array methods in JavaScript by implementing the following four methods from scratch: myMap, myFilter, myReduce, and myForEach.
+const arrMethods = [0,1,2,3,4]
+```
+## MAP => myMap
+```bash 
+Array.prototype.myMap= function(callback){
+    const result = [];
+    for(let i = 0; i < this.length; i++){
+        if(i in this){
+           result.push(callback(this[i],i,this));
+        }
+    }
+return result;
+};
+
+console.log("My map:", arrMethods.myMap(x => x*2));
+```
+## FOREACH = myForEach
+
+```bash
+```
+
 
 

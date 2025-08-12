@@ -59,3 +59,20 @@ let nullableData = {
 };
 
 console.log(nullables(nullableData));
+
+
+// EXERCISES 5
+
+const arrMethods = [0,1,2,3,4]
+
+Array.prototype.myMap= function(callback){
+    const result = [];
+    for(let i = 0; i < this.length; i++){
+        if(i in this){
+           result.push(callback(this[i],i,this));
+        }
+    }
+return result;
+};
+
+console.log("My map:", arrMethods.myMap(x => x*2));
