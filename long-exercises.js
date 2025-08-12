@@ -37,3 +37,25 @@ const items = [
 ];
 console.log(sortProducts(items));
 
+// EXERCISES 4
+ 
+const nullables = (data)=>{
+    for(let item in data){
+        if(data[item] === null){
+            data[item] = 0;
+    }else if(data[item] === undefined){
+      data[item] = "";
+    }
+}
+  return data;
+}
+
+let nullableData = {
+  name: undefined,
+  age: null,
+  city: "Kigali",
+  score: null,
+  status: undefined
+};
+
+console.log(nullables(nullableData));
