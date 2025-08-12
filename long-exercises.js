@@ -75,4 +75,13 @@ Array.prototype.myMap= function(callback){
 return result;
 };
 
-console.log("My map:", arrMethods.myMap(x => x*2));
+Array.prototype.myForEach = function(callback){
+        const result = [];
+    for(let i = 0; i < this.length; i++){
+        if(i in this){
+           callback(this[i],i,this);
+        }
+    }
+}
+
+arrMethods.myForEach((val, i) => console.log(`Index: ${i}: ${val}`));
