@@ -34,4 +34,11 @@ Array.prototype.myForEachs = function(callback){
 }
 nyesa.myForEachs((itema, index) => console.log(`Index: ${index}, Items: ${itema}`))
 
+
+
 console.log(nyesa.reduce((a,b) => a+b,0));
+
+var a = 1, b = 2;
+[a, b] = [b, a]
+console.log(a)
+console.log(b)
