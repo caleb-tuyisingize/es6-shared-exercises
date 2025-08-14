@@ -42,3 +42,21 @@ var a = 1, b = 2;
 [a, b] = [b, a]
 console.log(a)
 console.log(b)
+
+console.log("--------_______________--------");
+
+const counterFunction = ()=>{
+    let counter = 0;
+
+    return function callback(){
+     counter += 1;
+     return counter;
+    };
+}
+const counter = counterFunction();
+console.log(counter());
+console.log(counter());
+console.log(counter());
+console.log(counter());
+console.log(counter());
+console.log(counter());
