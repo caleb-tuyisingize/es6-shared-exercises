@@ -37,3 +37,97 @@ const items = [
 ];
 console.log(sortProducts(items));
 
+// EXERCISES 4
+ 
+const nullables = (data)=>{
+    for(let item in data){
+        if(data[item] === null){
+            data[item] = 0;
+    }else if(data[item] === undefined){
+      data[item] = "";
+    }
+}
+  return data;
+}
+
+let nullableData = {
+  name: undefined,
+  age: null,
+  city: "Kigali",
+  score: null,
+  status: undefined
+};
+
+console.log(nullables(nullableData));
+
+
+// EXERCISES 5
+
+const arrMethods = [0,1,2,3,4]
+
+Array.prototype.myMap= function(callback){
+    const result = [];
+    for(let i = 0; i < this.length; i++){
+        if(i in this){
+           result.push(callback(this[i],i,this));
+        }
+    }
+return result;
+};
+console.log("My map:", arrMethods.myMap(x => x*2));
+Array.prototype.myForEach = function(callback){
+        const result = [];
+    for(let i = 0; i < this.length; i++){
+        if(i in this){
+           callback(this[i],i,this);
+        }
+    }
+}
+
+arrMethods.myForEach((val, i) => console.log(`Index: ${i}: ${val}`));
+
+Array.prototype.myFilter = function(callback){
+        const result = [];
+    for(let i = 0; i < this.length; i++){
+        if(i in this && callback(this[i],i,this)){
+           result.push(this[i]);
+        }
+    }
+    return result;
+}
+
+console.log("myFilter:", arrMethods.myFilter(x => x % 2 === 0));
+
+const transformKeys = (obj, transformFn)=>{
+  const result = {};
+
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      const newKey = transformFn(key);
+      result[newKey] = obj[key];
+    }
+  }
+ 
+  return result;
+
+}
+
+const inputObject = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+};
+ const transformKey = (key) => key.toUpperCase();
+ const transformObject = transformKeys(inputObject, transformKey);
+console.log(transformObject);
+
+const validatePhoneNumber = (number)=>{
+  const pattern = /^(\d{10}|\d{3}[- ]\d{3}[- ]\d{4})$/;
+  return pattern.test(number)
+}
+console.log(validatePhoneNumber("1234567890"));
+console.log(validatePhoneNumber("123-456-7890"));
+console.log(validatePhoneNumber("123 456 7890"));
+console.log(validatePhoneNumber("123-45-67890")); 
+console.log(validatePhoneNumber("1234-567890"));
+
