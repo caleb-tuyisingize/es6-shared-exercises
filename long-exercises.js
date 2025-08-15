@@ -139,11 +139,33 @@ const duplicatesRemover = (arr)=>{
 }
 console.log(duplicatesRemover(dupplicatedArray));
 
+// Refering to the Grobal object by using this keyword
 const theObj = {
   name: "GIHUGU",
   age: 23,
+  setter: (v) =>{
+      this.name = v;
+      console.log(`Hello ${this.name} How are you doing??`);
+  },
   greet: function(){
     console.log(`Hello ${this.name} How are you doing??`);
   }
 }
 theObj.greet();
+
+theObj.setter("Mevis");
+
+// Priority 3 - less important Counting Zeros
+
+const countZeros = (n)=>{
+  let counter = 0;
+  let divisor = 10;
+
+  while(divisor <= n){
+    counter += Math.floor(n / divisor);
+    divisor *= 10;
+  }
+  return counter;
+}
+
+console.log(countZeros(100));
