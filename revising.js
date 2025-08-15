@@ -60,3 +60,17 @@ console.log(counter());
 console.log(counter());
 console.log(counter());
 console.log(counter());
+
+const obj2 = {
+    Name: "Caleb",
+    Age: 23,
+    Class: "C",
+    news: function(){
+        console.log(`News of the day ${this.Name}`);
+    }
+}
+obj2.prototype.obj3 = function(name){
+    this.name = name
+}
+const user = new obj3("Gihugu");
+console.log(obj.news());
