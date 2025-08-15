@@ -137,4 +137,13 @@ const dupplicatedArray = [1,2,3,3,4,2,4,5,6,4,6];
 const duplicatesRemover = (arr)=>{
   return arr.filter((a,b)=> arr.indexOf(a) === b);
 }
-console.log(duplicatesRemover(dupplicatedArray))
+console.log(duplicatesRemover(dupplicatedArray));
+
+const theObj = {
+  name: "GIHUGU",
+  age: 23,
+  greet: function(){
+    console.log(`Hello ${this.name} How are you doing??`);
+  }
+}
+theObj.greet();
