@@ -169,3 +169,14 @@ const countZeros = (n)=>{
 }
 
 console.log(countZeros(100));
+
+const mixed = {
+  name: "Caleb Mevis",
+  age: 30,
+  age: 20,
+  isStudent: true,
+  isStudent: false,
+  courses: ["Math", "Science", "History"]
+}
+
+console.log(mixed);
