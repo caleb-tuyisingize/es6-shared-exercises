@@ -179,5 +179,6 @@ const mixed = {
   isStudent: false,
   courses: ["Math", "Science", "History"]
 }
-
-console.log(mixed);
+const mapd = new Map()
+mapd.set(mixed)
+console.log("Object of Caleb",mapd);
