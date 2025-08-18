@@ -172,6 +172,7 @@ console.log(countZeros(100));
 
 const mixed = {
   name: "Caleb Mevis",
+  name: "Samuel",
   age: 30,
   age: 20,
   isStudent: true,
