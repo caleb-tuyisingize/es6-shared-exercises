@@ -179,5 +179,13 @@ const mixed = {
   isStudent: false,
   courses: ["Math", "Science", "History"]
 }
+const mapd = new Map()
+mapd.set("Object of Caleb",mixed);
+console.log(mapd);
 
-console.log(mixed);
+
+
+const stringConcateFunction = (money = "Two Tousands", curency = "Dollars")=>{
+ console.log(`${money} ${curency}`);
+}
+stringConcateFunction();
