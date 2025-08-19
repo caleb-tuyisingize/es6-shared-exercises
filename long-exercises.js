@@ -1,5 +1,5 @@
 //Exercises 1
-
+/*
 const arrayStats = (arr)=>{
  let sum = 0;
  for(let num of arr){
@@ -189,3 +189,20 @@ const stringConcateFunction = (money = "Two Tousands", curency = "Dollars")=>{
  console.log(`${money} ${curency}`);
 }
 stringConcateFunction();
+*/
+
+const stringCompression = (string)=>{
+// const dups = string.split("");
+let countLetters = 0;
+let compressedLetter = "";
+for(let i = 0; i <= string.length; i++){
+   if(string[i] === string[i+1]){
+     countLetters++;
+   }else{
+    compressedLetter += string[i] + countLetters;
+    countLetters = 1;
+   }
+}
+console.log(compressedLetter)
+}
+stringCompression("AAAABBBCCDAA");
