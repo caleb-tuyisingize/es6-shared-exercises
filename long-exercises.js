@@ -208,9 +208,21 @@ console.log(compressedLetter)
 stringCompression("AAAABBBCCDAA");
 
 */
-
+/*
 const reverseText = (text)=>{
   console.log(text.split(" ").map(a=>a.split("").reverse().join("")).join(" "));
 }
 reverseText("Mevis Tuyisingize")
 reverseText("I am the good boy")
+
+*/
+
+const gcd = (a,b)=>{
+  while(b !== 0){
+    let temp = b;
+    b = a % b;
+    a = temp;
+  }
+  console.log(a);
+}
+gcd(2,3);
