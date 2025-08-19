@@ -180,5 +180,12 @@ const mixed = {
   courses: ["Math", "Science", "History"]
 }
 const mapd = new Map()
-mapd.set(mixed)
-console.log("Object of Caleb",mapd);
+mapd.set("Object of Caleb",mixed);
+console.log(mapd);
+
+
+
+const stringConcateFunction = (money = "Two Tousands", curency = "Dollars")=>{
+ console.log(`${money} ${curency}`);
+}
+stringConcateFunction();
