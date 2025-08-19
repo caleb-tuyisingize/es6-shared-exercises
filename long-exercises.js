@@ -190,7 +190,7 @@ const stringConcateFunction = (money = "Two Tousands", curency = "Dollars")=>{
 }
 stringConcateFunction();
 */
-
+/*
 const stringCompression = (string)=>{
 // const dups = string.split("");
 let countLetters = 0;
@@ -206,3 +206,11 @@ for(let i = 0; i <= string.length; i++){
 console.log(compressedLetter)
 }
 stringCompression("AAAABBBCCDAA");
+
+*/
+
+const reverseText = (text)=>{
+  console.log(text.split(" ").map(a=>a.split("").reverse().join("")).join(" "));
+}
+reverseText("Mevis Tuyisingize")
+reverseText("I am the good boy")
