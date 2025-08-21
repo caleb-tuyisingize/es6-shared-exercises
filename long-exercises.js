@@ -232,7 +232,7 @@ console.log([].concat(...nestedArray))
 console.log(nestedArray.flat())
 console.log(nestedArray.flat(Infinity))
 
-const objects = {
+const objects = { // Object notation
   name : "Calen"
 }
 
@@ -249,3 +249,5 @@ console.log(objects)
 // ONJECT DOT ASSIGN
 Object.assign(objects, {City: "Kigali", College: "RP Tumba College"});
 console.log(objects)
+
+console.log(objects.hasOwnProperty)
