@@ -226,3 +226,28 @@ const gcd = (a,b)=>{
   console.log(a);
 }
 gcd(2,3);
+
+const nestedArray = [1, [2, 3], [4, [5, 6]]];
+console.log([].concat(...nestedArray))
+console.log(nestedArray.flat())
+console.log(nestedArray.flat(Infinity))
+
+const objects = { // Object notation
+  name : "Calen"
+}
+
+// DOT NOTATION
+
+objects.age = 21;
+console.log(objects)
+
+// BLACKETS NOTATION
+objects['Who'] = "Ish Kevin";
+
+console.log(objects)
+
+// ONJECT DOT ASSIGN
+Object.assign(objects, {City: "Kigali", College: "RP Tumba College"});
+console.log(objects)
+
+console.log(objects.hasOwnProperty)
