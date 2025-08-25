@@ -140,4 +140,4 @@ class Gihugu{
 }
 const theMe1 = new Gihugu("Caleb Mevis",92);
 const theMe2 = new Gihugu("Thierry Mevis",96);
-
+console.log()
