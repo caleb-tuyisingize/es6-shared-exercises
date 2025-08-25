@@ -133,6 +133,8 @@ console.log(validatePhoneNumber("1234-567890"));
 
 class Gihugu{
  constructor(name, age){
-  
+  this.name = name;
+  this.age = age;
+  console.log(`Hello ${this.name} I want to tell you that you are now ${this.age} years old.`);
  }
 }
