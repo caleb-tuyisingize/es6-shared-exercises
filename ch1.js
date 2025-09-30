@@ -13,7 +13,6 @@ const person = {
         sname:"Collegio",
         location: "Huye",
         number: 23
-
     }
 
 }
